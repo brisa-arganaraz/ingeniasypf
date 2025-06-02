@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+ /* de aca para adelante es todo el css para el princiopio de todas las paginas [osea el menu}*/
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: white;
+}
+
+.header {
+    background-color: rgb(5, 165, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: relative;
+}
+  
+     
+.logo {
+    cursor: pointer;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    transition: transform 0.2s;
+    padding-top: 7px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color:rgb(5, 165, 0) ;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+#icono-nav {
+    display: none; /*  Oculto en pantallas grandes */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #icono-nav {
+        display: block; /* Mostramos el icono en pantallas pequeñas */
+    }
+    
+    .nav-links {
+        display: none; /*  Ocultamos el menú */
+        flex-direction: column;
+        background-color: rgb(5, 165, 0);
+        position: absolute;
+        top: 85px;
+        right: 10%;
+        width: 200px;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 0.3s ease; /*  Transición suave */
+        padding-top: 15px;
+        padding-bottom: 15px;
+        z-index: 10;
+    }
+
+    .nav-links.show {
+        display: flex; /*  Mostramos el menú al hacer clic */
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-bottom: 1px solid white;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.3);;
+  color: #000;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+ /* CSS DE SECTION HERO PARA TODAS LAS PAGINAS*/
+
+ .hero {
+    background-image: url(imagenes/bienvenidainicio.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 250px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh; /* Reduce un poco la altura en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh; /* Reduce más en pantallas pequeñas */
+    }
+}
+
+/* CSS DE LA PAGINA DE INICIO {INFO } */
+
+/* Contenedor principal que centra la sección */
+.info {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    overflow-x: auto;
+  }
+  
+  /* Estilo de la sección de la historia */
+.historia {
+    background-color: #fff;
+    border: 7px solid rgb(5, 165, 0) ;
+    border-radius: 0px;
+    padding: 20px;
+    max-width: 1300px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+  }
+  
+.historia h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: rgb(5, 165, 0);
+  }
+  
+.historia p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  /* Contenedor de las fotos */
+.contenedor-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  /* Contenedor de cada persona */
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 200px;
+    border: 4px solid rgb(5, 165, 0); /* El borde se aplica aquí */
+    border-radius: 0px;
+  }
+  
+.persona img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Estilo del nombre, fuera del borde */
+.persona h5 {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: black;
+    text-align: center;
+  }
+  
+  /* Efecto hover en imágenes (crece pero dentro del marco) */
+.persona:hover img {
+    transform: scale(1.05);
+  }
+  
+/* CSS DEL SESION */
+
+.sesion {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
+    background-color: #f3f3f3; /* opcional: color de fondo del body */
+    background-image: url(imagenes/sesion.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+.login-container {
+    background: rgba(255, 255, 255, 0.85); /* Blanco con transparencia */
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(5, 165, 0);
+  }
+
+.login-container input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+.login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(5, 165, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+  }
+
+.login-container button:hover {
+    background-color: rgb(4, 140, 0);
+  }
+
+.login-container .links {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+.login-container .links a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+
+.login-container .links a:hover {
+    text-decoration: underline;
+  }
+
+/* CSS DEL COLLAGE VIDEO */
+
+.video {
+    width: 100%;
+    max-width: 1337px;
+    height: auto;
+    outline: none;
+    pointer-events: none;
+}
+
+/* CSS DEL FOOTER */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+/* CSS DE RESERVAS */
+
+
+.anuncio-importante {
+    background-color: rgb(5, 165, 0) ; /* Fondo rojo */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 23px auto;
+    border-radius: 0;
+    font-size: 1.2rem;
+    border: 7px solid black; /* Borde negro */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100% ; /* Para que se mantenga dentro del margen */
+    max-width: 97%; /* Nunca excede el ancho del contenedor/pantalla */
+    overflow-wrap: break-word;
+  }
+  
+  
+/* CSS reserva formulario */
+
+.reserva {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 100vh;
+    background-image: url(imagenes/sesion2.jpg); 
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  
+.reserva form {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+
+.reserva h2 {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 3.3rem;
+  }
+  
+.reserva form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+.reserva form input,
+ .reserva form select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+.reserva button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(5, 165, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.reserva button:hover {
+    background-color: rgb(4, 140, 0);
+  }
+  
+  #mensaje-reserva {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+/* CSS comentarios */
+
+.comentarios {
+    background: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comentarios h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  #form-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #form-comentario input,
+  #form-comentario textarea {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  #form-comentario button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #form-comentario button:hover {
+    background-color: #218838;
+  }
+  
+  #lista-comentarios {
+    margin-top: 2rem;
+  }
+  
+  .comentario {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #28a745;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comentario strong {
+    display: block;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .comentario p {
+    margin: 0;
+    color: #555;
+  }
+  
+/* CSS DE SERVICIO*/
+
+.servicios-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.servicio-cuadro {
+  background-color: white;
+  border: 7px solid green;
+  border-radius: 0;
+  padding: 20px;
+  max-width: 1300px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.titulo-servicio {
+  color: green;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.servicio-cuadro ul {
+  list-style: none;
+  padding: 0;
+}
+
+.servicio-cuadro li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .servicio-cuadro {
+    padding: 15px;
+  }
+
+  .titulo-servicio {
+    font-size: 1.5em;
+  }
+}
+ 
+/* SERVICIOS EXTRA */
+
+/* Estilo general */
+.info-alternada {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-alternada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imagenes/logo\ .png"); /* Ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Ajustá la transparencia aquí */
+  z-index: -1;
+}
+
+/* Cada bloque */
+.info-bloque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Invertir orden */
+.invertido {
+  flex-direction: row-reverse;
+}
+
+/* Imagen */
+.info-img {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.info-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Texto */
+.info-texto {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.info-texto h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: green;
+}
+
+.info-texto p,
+.info-texto ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.info-texto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-texto ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive: para móviles */
+@media (max-width: 768px) {
+  .info-bloque {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .invertido {
+    flex-direction: column;
+  }
+
+  .info-texto p,
+  .info-texto ul {
+    padding: 0 10px;
+  }
+}
+
+/* CSS DE PENTAÑA REGLAMENTOS */
+ 
+.reglamento-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.reglamento-section h2 {
+  font-size: 2.2em;
+  color: green;
+  margin-bottom: 40px;
+}
+
+.reglas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.regla-tarjeta {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.regla-tarjeta:hover {
+  transform: scale(1.02);
+}
+
+.regla-tarjeta h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.regla-tarjeta p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* CSS DE PENTAÑA CONTACTO */
+
+.contacto {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contacto h2 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.5rem;
+}
+
+.contacto-form h3,
+.contacto-mapa h3 {
+  text-align: center;
+}
+
+.formulario-mapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contacto-form,
+.contacto-mapa {
+  flex: 1 1 350px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contacto-form button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacto-form button:hover {
+  background-color: #1b5e20;
+}
+
+/*css de redes*/
+
+.contacto-redes {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url("imagenes/canchas.webp") center/cover no-repeat;
+  color: white;
+}
+
+.botones-redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.botones-redes a {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid white;
+}
+
+.botones-redes a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*css de horarios y direcion*/
+
+.horario-direccion {
+  display: flex;
+  flex-wrap: wrap; /* Permite que se acomoden si no entra todo en una fila */
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+.contacto-horarios,
+.contacto-direccion {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  flex: 1 1 300px; /* crece, encoge y tiene un ancho mínimo */
+  max-width: 400px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.contacto-horarios:hover,
+.contacto-direccion:hover {
+  transform: translateY(-5px); /* efecto flotante al pasar el mouse */
+}
+
+.horario-direccion h3 {
+  margin-bottom: 1rem;
+  color: rgb(5, 165, 0);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.horario-direccion p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contacto-direccion a {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto-direccion a:hover {
+  text-decoration: underline;
+}
+

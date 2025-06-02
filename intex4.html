@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- SECCION MENU -->
+
+   <header class="header">
+    <div class="logo">
+     <a href="intex.html">
+        <img src="imagenes/logo .png" alt="logoimg">
+     </a>
+    </div>
+    
+    <nav class="menu">
+        <ul class="nav-links" id="nav-links">
+            <li><a href="intex.html">INICIO</a></li>
+            <li><a href="intex1.html">RESERVAS</a></li>
+            <li><a href="intex2.html">SERVICIOS</a></li>
+            <li><a href="intex3.html">REGLAMENTO</a></li>
+            <li><a href="intex4.html"class="active">CONTACTO</a></li>
+        </ul>
+    </nav>
+    
+    <div id="icono-nav" onclick="responsiveMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+</header>
+
+<!-- SECCION HERO IMAGEN PRINCIPAL -->
+
+   <section class="hero">
+    <div >
+         
+     </div>
+ </section>
+
+<!-- SECCION FORMULARIO Y UBICACION -->
+
+<section class="contacto">
+    <h2>Contacto</h2>
+    <div class="formulario-mapa">
+      <div class="contacto-form">
+        <h3>Envíanos tu consulta</h3>
+        <br>
+        <form>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+  
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+  
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+  
+      <div class="contacto-mapa">
+        <h3>Ubicación</h3>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.637271501708!2d-58.4685245233743!3d-34.638830472942814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc94c8b4bde99%3A0x445b47b307be5df3!2sCancha!5e0!3m2!1ses!2sar!4v1717073200000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section> 
+
+<!-- SECCION REDES -->
+
+<section class="contacto-redes">
+    <h3>Redes y contacto rápido</h3>
+    <div class="botones-redes">
+      <a href="https://wa.me/123456789" target="_blank">📞 WhatsApp</a>
+      <a href="https://facebook.com/tu-pagina" target="_blank">📘 Facebook</a>
+      <a href="https://instagram.com/tu-pagina" target="_blank">📸 Instagram</a>
+    </div>
+  </section>
+
+<!-- SECCION HORARIO Y DIRECCION -->
+
+  <section class="horario-direccion">
+    <div class="contacto-horarios">
+      <h3>Horarios de Atención</h3>
+      <p><strong>Lunes a Viernes:</strong> 17:00 a 00:00 hs</p>
+      <p><strong>Sábados, Domingos y Feriados:</strong> 09:00 a 00:00 hs</p>
+    </div>
+  
+    <div class="contacto-direccion">
+      <h3>Cómo llegar</h3>
+      <a href="https://g.co/kgs/pWqRqzp" target="_blank">📍 Ver en Google Maps</a>
+    </div>
+  </section>
+
+ <!-- FOOTER -->
+
+ <footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

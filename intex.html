@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SECCION MENU -->
+
+     <header class="header">
+        <div class="logo">
+         <a href="intex.html">
+            <img src="imagenes/logo .png" alt="logoimg">
+         </a>
+        </div>
+        
+        <nav class="menu">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="intex.html"class="active">INICIO</a></li>
+                <li><a href="intex1.html">RESERVAS</a></li>
+                <li><a href="intex2.html">SERVICIOS</a></li>
+                <li><a href="intex3.html">REGLAMENTO</a></li>
+                <li><a href="intex4.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+        
+        <div id="icono-nav" onclick="responsiveMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+    <!-- SECCION HERO IMAGEN PRINCIPAL -->
+
+    <section class="hero">
+    </section>
+
+    <!-- SECCION INFO HISTORIA -->
+
+    <section class="info">
+       <div class="historia">
+         <h1> NUESTRA HISTORIA </h1>
+            <P>Fútbol San Juan nació de un sueño compartido por un grupo de amigos apasionados 
+                   por el fútbol: Sebastián Rambert, Darío Acevedo y Brian Migliazzi. Durante años, 
+                   su amor por este deporte los llevó a entrenar y enseñar, acumulando experiencia en cada paso.
+                    </P>
+            <P>El 8 de marzo de 2018, ese sueño se hizo realidad, creando un espacio para compartir
+                   su pasión con amigos, familiares y toda la comunidad. Desde entonces, Fútbol San Juan 
+                   ha crecido como un lugar donde se valoran el trabajo en equipo, el respeto y el esfuerzo constante.</P>
+                
+            <P><B>Fútbol San Juan... más que un club, una familia</B></P>
+
+                <div class="contenedor-fotos">
+                  <div class="persona">
+                    <img src="imagenes/fotoverde.jpeg" alt="">
+                       <h5>Sebastián Rambert</5>
+                </div>
+                <div class="persona">
+                    <img src="imagenes/fotomedio.jpeg" alt="">
+                       <h5>Brian Migliazzi</h5>
+                </div>
+                <div class="persona">
+                    <img src="imagenes/fotoverde (2).jpeg" alt="">
+                       <h5>Darío Acevedo</h5>
+                </div>
+                </div>
+        </div>
+    </section>
+              
+    <!-- SECCION SESION-->
+
+    <section class="sesion">
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <input type="email" placeholder="Correo electrónico" id="email">
+            <input type="password" placeholder="Contraseña" id="password">
+            <button>Ingresar</button>
+        
+            <div class="links">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+              <a href="#">¿No tenés cuenta? Registrate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION COLLAGE VIDEO-->
+
+    <section class="video-seccion">
+          <video class="video" autoplay loop muted playsinline>
+            <source src="imagenes/video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+      </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+      </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
