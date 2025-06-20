@@ -12,8 +12,16 @@
 
 body {
     background-color: white;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
+}
+ /* añadido para EL STICKY FOOTER, que el footer siempre aparezca al final sin importar el contenido de la web*/
+.main {
+  flex: 1; 
+  padding: 1rem;
+}
 .header {
     background-color: rgb(5, 165, 0);
     display: flex;
@@ -154,7 +162,26 @@ body {
     margin: 20px auto;
     overflow-x: auto;
   }
-  
+   /* boton para redirigirte y animarte a iniciar una cuenta o logearte*/
+  .botonBienvenido {
+    width: 150px;
+    padding: 0.75rem;
+    background-color: white;
+    color: rgb(5, 165, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+    text-decoration: none;
+  }
+
+.botonBienvenido:hover {
+    background-color: rgb(4, 140, 0);
+    color: white;
+  }
+
   /* Estilo de la sección de la historia */
 .historia {
     background-color: #fff;
@@ -312,7 +339,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
+  
     bottom: 0;
     width: 100%;
   }
