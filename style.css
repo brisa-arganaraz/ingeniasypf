@@ -975,6 +975,10 @@ footer {
   text-align: center;
   color: #1b5e20;
 }
+.subtitulo-registro{
+  text-align: center;
+  color: #1b5e20;
+}
 
 #formCheckRegistro {
   display: flex;
