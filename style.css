@@ -77,7 +77,7 @@ body {
 }
 
 #icono-nav {
-    display: none; /*  Oculto en pantallas grandes */
+    display: none; 
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -85,7 +85,7 @@ body {
 
 @media (max-width: 768px) {
     #icono-nav {
-        display: block; /* Mostramos el icono en pantallas pequeñas */
+        display: block;
     }
     
     .nav-links {
@@ -98,14 +98,14 @@ body {
         width: 200px;
         border-radius: 5px;
         overflow: hidden;
-        transition: all 0.3s ease; /*  Transición suave */
+        transition: all 0.3s ease; 
         padding-top: 15px;
         padding-bottom: 15px;
         z-index: 10;
     }
 
     .nav-links.show {
-        display: flex; /*  Mostramos el menú al hacer clic */
+        display: flex;
     }
 
     .nav-links a {
@@ -123,6 +123,20 @@ body {
   color: #000;
   border-radius: 0;
   font-weight: bold;
+}
+/* icono user y su contenedor */
+#icon-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+}
+
+#icono {
+    width: 40px; 
+    height: auto;
+    margin-left: 10px;
+    background-color: var(--color2);
 }
 
  /* CSS DE SECTION HERO PARA TODAS LAS PAGINAS*/
@@ -143,13 +157,13 @@ body {
 
 @media (max-width: 768px) {
     .hero {
-        height: 70vh; /* Reduce un poco la altura en pantallas medianas */
+        height: 70vh; 
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 50vh; /* Reduce más en pantallas pequeñas */
+        height: 50vh; 
     }
 }
 
@@ -222,7 +236,7 @@ body {
     align-items: center;
     overflow: hidden;
     width: 200px;
-    border: 4px solid rgb(5, 165, 0); /* El borde se aplica aquí */
+    border: 4px solid rgb(5, 165, 0); 
     border-radius: 0px;
   }
   
@@ -252,7 +266,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh; /* ocupa toda la altura de la pantalla */
-    background-color: #f3f3f3; /* opcional: color de fondo del body */
+    background-color: #f3f3f3; 
     background-image: url(imagenes/sesion.jpg);
     background-size: cover;
     background-position: center;
@@ -263,7 +277,7 @@ body {
   }
 
 .login-container {
-    background: rgba(255, 255, 255, 0.85); /* Blanco con transparencia */
+    background: rgba(255, 255, 255, 0.85); 
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
     padding: 2rem;
@@ -355,32 +369,32 @@ footer {
     margin: 23px auto;
     border-radius: 0;
     font-size: 1.2rem;
-    border: 7px solid black; /* Borde negro */
+    border: 7px solid black; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 100% ; /* Para que se mantenga dentro del margen */
-    max-width: 97%; /* Nunca excede el ancho del contenedor/pantalla */
+    width: 100% ; 
+    max-width: 97%; 
     overflow-wrap: break-word;
   }
   
   
 /* CSS reserva formulario */
-
 .reserva {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-width: 100vh;
-    background-image: url(imagenes/sesion2.jpg); 
-    background-size: cover;
-    background-position: center;
-    padding: 2rem 1rem;
-    gap: 10px;
-    box-sizing: border-box;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(imagenes/sesion2.jpg); 
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 1rem;
+  gap: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
 .reserva form {
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    background: rgba(255, 255, 255, 0.9); 
     padding: 2rem;
     border-radius: 10px;
     max-width: 400px;
@@ -576,10 +590,10 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("imagenes/logo\ .png"); /* Ruta de tu imagen */
+  background-image: url("imagenes/logo\ .png"); 
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Ajustá la transparencia aquí */
+  opacity: 0.2; 
   z-index: -1;
 }
 
@@ -808,7 +822,7 @@ footer {
 
 .horario-direccion {
   display: flex;
-  flex-wrap: wrap; /* Permite que se acomoden si no entra todo en una fila */
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 2rem;
   padding: 2rem 1rem;
@@ -822,7 +836,7 @@ footer {
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   padding: 2rem;
-  flex: 1 1 300px; /* crece, encoge y tiene un ancho mínimo */
+  flex: 1 1 300px;
   max-width: 400px;
   box-sizing: border-box;
   transition: transform 0.3s ease;
@@ -830,7 +844,7 @@ footer {
 
 .contacto-horarios:hover,
 .contacto-direccion:hover {
-  transform: translateY(-5px); /* efecto flotante al pasar el mouse */
+  transform: translateY(-5px); 
 }
 
 .horario-direccion h3 {
@@ -860,3 +874,152 @@ footer {
   text-decoration: underline;
 }
 
+/* prueba formulario con pagina aparte */
+.registro {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/imagenes/fondo-registr1.png'),
+    url('/imagenes/fondo-registr2.png');
+  background-size:
+    auto,
+    39% auto,
+    40% auto;
+  background-position:
+    center center,
+    top left,
+    bottom right,
+    bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  background-color: #e6ffe6; 
+}
+
+.form-registro {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.form-registro h1 {
+  color: rgb(5, 165, 0);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-registro label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #222;
+  text-align: left;
+}
+
+.form-check-label {
+  display: inline;
+  margin: 0;
+  font-weight: normal;
+
+}
+#formCheckRegistro .form-check-label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+
+
+.form-registro input,
+.form-registro .form-control,
+.form-registro .input-group-text {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.7);
+  color: #222;
+}
+
+.form-registro .form-control:focus {
+  border: 2px solid #28a745;
+  box-shadow: 0 0 0 0.15rem rgba(40, 167, 69, 0.25);
+}
+
+.btn-primary {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgb(5, 165, 0);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(4, 140, 0);
+}
+
+#tituloRegistro {
+  text-align: center;
+  color: #1b5e20;
+}
+
+#formCheckRegistro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  margin-top: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+#formCheckRegistro .form-check-label {
+  margin: 0;
+  padding-top: 0.5rem;
+  line-height: 1.2;
+}
+
+#formCheckRegistro .form-check-input {
+  position: absolute;
+  left: 1rem;
+  top: 0.2rem;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .registro {
+    background-size: auto, 40% auto, 40% auto, cover;
+    background-position: center center, top left, bottom right, center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .registro {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('../imagenes/cancha-futbol.jpg');
+    background-size: auto, cover;
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-color: #f8f9fa;
+  }
+  
+  
+}
