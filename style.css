@@ -1027,3 +1027,513 @@ footer {
   
   
 }
+
+
+/* PERFIL */    
+
+/*SECCIÓN HEADER DEL CLUB*/
+.club-header-section {
+  margin-bottom: 30px;
+  margin-top:20px;
+}
+
+.club-banner {
+  background: linear-gradient(135deg, #2E7D32, #4CAF50);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+ }
+
+.club-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+/* ===== SECCIÓN PERFIL USUARIO ===== */
+
+.profile-section {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.profile-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 1400px;
+  width: 100%; 
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto; /* evita que se estire de más */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2E7D32, #4CAF50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  }
+
+.birthday-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #FF6B35;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (min-width: 768px) {
+  .profile-content {
+    flex-direction: row; /* avatar a la izquierda, info a la derecha */
+    justify-content: center; /* centrado del bloque total */
+    align-items: center;
+    max-width: 800px;
+  }
+
+  .user-info {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.user-info h1 {
+  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.user-details {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.status-badge {
+  background: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.points-badge {
+  background: #FF9800;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.edit-profile-btn {
+  background: linear-gradient(135deg, #2E7D32, #4CAF50);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.edit-profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* ===== SECCIÓN ESTADÍSTICAS ===== */
+
+.statistics-section {
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: slideUp 0.6s ease-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2E7D32;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ===== SECCIÓN PROGRAMA DE PUNTOS ===== */
+.points-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.points-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.points-balance {
+  background: linear-gradient(135deg, #FF9800, #FF5722);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.points-balance h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .rewards-grid {
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* mantiene 3 pero adaptables */
+    overflow-x: auto; /* permite hacer scroll si no entran */
+  }
+}
+
+.reward-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.reward-card:hover {
+  border-color: #4CAF50;
+  transform: translateY(-2px);
+}
+
+.reward-card.available {
+  border-color: #4CAF50;
+  background: #f0fff4;
+}
+
+.reward-card.unavailable {
+  opacity: 0.6;
+  background: #f5f5f5;
+}
+
+.reward-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.reward-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.reward-cost {
+  background: #2E7D32;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.redeem-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.redeem-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.redeem-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reservations-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s ease-out;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab.active {
+  color: #2E7D32;
+  background: rgba(46, 125, 50, 0.1);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #2E7D32;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.reservation-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 4px solid #2E7D32;
+  transition: all 0.3s ease;
+}
+
+.reservation-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-card.cancelled {
+  border-left-color: #dc3545;
+  background: #fff5f5;
+}
+
+.reservation-card.completed {
+  border-left-color: #28a745;
+  background: #f0fff4;
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.reservation-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.reservation-status {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-completed {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.reservation-details {
+  color: #666;
+  line-height: 1.5;
+}
+
+.reservation-details span {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.points-earned {
+  background: #FF9800;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+            
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+            
+  .rewards-grid {
+    grid-template-columns: 1fr;
+  }
+            
+  .tabs {
+    flex-wrap: wrap;
+  }
+            
+  .reservation-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .points-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
