@@ -1,282 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-      
-    <!-- SECCION MENU -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../imagenes/logo .png" alt="logoimg" />
+        </a>
+      </div>
 
-     <header class="header">
-        <div class="logo">
-         <a href="index.html">
-            <img src="../imagenes/logo .png" alt="logoimg">
-         </a>
-        </div>
-        
-        <nav class="menu">
-            <ul class="nav-links" id="nav-links">
-              <li><a href="../index.html">INICIO</a></li>
-              <li><a href="../pages/reservas.html">RESERVAS</a></li>
-              <li><a href="../pages/servicios.html">SERVICIOS</a></li>
-              <li><a href="../pages/reglamento.html">REGLAMENTO</a></li>
-              <li><a href="../pages/contacto.html">CONTACTO</a></li>
-              <li><a href="../pages/perfil.html"class="active">PERFIL</a></li>
-            </ul>
-        </nav>
-        
-        <div id="icono-nav" onclick="responsiveMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+      <nav class="menu">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html" class="active">INICIO</a></li>
+          <li><a href="reservas.html">RESERVAS</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="reglamento.html">REGLAMENTO</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
 
-        </header>
+      <div id="icono-nav" onclick="responsiveMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Contenedor para el icono User -->
+      <div id="icon-container">
+        <a href="#"
+          ><img id="icono" src="/imagenes/iconoLogin.png" alt="Icono"
+        /></a>
+      </div>
+    </header>
+    <!-- --------------Fin de Header--------------- -->
 
     <!-- SECCIÓN HEADER DEL CLUB -->
-    
-     <section class="club-header-section">
-            <div class="club-banner">
-                <h2>🏟️ Complejo Deportivo San Juan</h2>
-                <p>Tu club de confianza desde 1985</p>
-            </div>
-        </section>
 
+    <section class="club-header-section">
+      <div class="club-banner">
+        <h2>🏟️ Complejo Deportivo San Juan</h2>
+        <p>Tu club de confianza desde 1985</p>
+      </div>
+    </section>
 
     <!-- SECCIÓN PERFIL USUARIO  -->
-        
-     <section class="profile-section">
-            <div class="profile-header">
-                <div class="profile-content">
-                <div class="avatar">
-                    DM
-                    <div class="birthday-badge">🎂</div>
-                </div>
-                <div class="user-info">
-                    <h1>Diego Martínez</h1>
-                    <div class="user-details">
-                        <p>📧 diego.martinez@email.com</p>
-                        <p>📱 +54 11 9876-5432</p>
-                        <p>🎂 20 de Junio (32 años) - ¡HOY!</p>
-                        <p>📅 Socio desde: Enero 2022</p>
-                    </div>
-                    <button class="edit-profile-btn" onclick="editarPerfil()">✏️ Editar Perfil</button>
-                </div>
+
+    <section class="profile-section">
+      <div class="profile-header">
+        <div class="profile-content">
+          <div class="avatar">
+            DM
+            <div class="birthday-badge">🎂</div>
+          </div>
+          <div class="user-info">
+            <h1>Diego Martínez</h1>
+            <div class="user-details">
+              <p>📧 diego.martinez@email.com</p>
+              <p>📱 +54 11 9876-5432</p>
+              <p>🎂 20 de Junio (32 años) - ¡HOY!</p>
+              <p>📅 Socio desde: Enero 2022</p>
             </div>
-         </div>
-        </section>
+            <button class="edit-profile-btn" onclick="editarPerfil()">
+              ✏️ Editar Perfil
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SECCIÓN ESTADÍSTICAS -->
-        
-     <section class="statistics-section">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">63</div>
-                    <div class="stat-label">Reservas Totales</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">58</div>
-                    <div class="stat-label">Partidos Jugados</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Reservas Activas</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Cancelaciones</div>
-                </div>
-            </div>
-        </section> 
-    
+
+    <section class="statistics-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">63</div>
+          <div class="stat-label">Reservas Totales</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">58</div>
+          <div class="stat-label">Partidos Jugados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Reservas Activas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Cancelaciones</div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECCIÓN PROGRAMA DE PUNTO -->
-       
-     <section class="points-section">
-            <div class="points-header">
-                <h2 class="section-title">
-                    <span>💎</span>
-                    Programa de Puntos San Juan
-                </h2>
-            </div>
 
-            <div class="points-balance">
-                <h3>2,450 Puntos Disponibles</h3>
-                <p>¡Seguí jugando para ganar más puntos!</p>
-            </div>
+    <section class="points-section">
+      <div class="points-header">
+        <h2 class="section-title">
+          <span>💎</span>
+          Programa de Puntos San Juan
+        </h2>
+      </div>
 
-            <h3 style="margin-bottom: 20px; color: #333;">🎁 Recompensas Disponibles</h3>
-            <div class="rewards-grid">
-                <div class="reward-card available">
-                    <div class="reward-icon">⚽</div>
-                    <div class="reward-title">Pelota de Fútbol Nike</div>
-                    <div class="reward-cost">800 puntos</div>
-                    <button class="redeem-btn" onclick="canjearRecompensa('pelota')">Canjear</button>
-                </div>
+      <div class="points-balance">
+        <h3>2,450 Puntos Disponibles</h3>
+        <p>¡Seguí jugando para ganar más puntos!</p>
+      </div>
 
-                <div class="reward-card available">
-                    <div class="reward-icon">🎫</div>
-                    <div class="reward-title">1 Hora de Cancha GRATIS</div>
-                    <div class="reward-cost">1,500 puntos</div>
-                    <button class="redeem-btn" onclick="canjearRecompensa('cancha')">Canjear</button>
-                </div>
+      <h3 style="margin-bottom: 20px; color: #333">
+        🎁 Recompensas Disponibles
+      </h3>
+      <div class="rewards-grid">
+        <div class="reward-card available">
+          <div class="reward-icon">⚽</div>
+          <div class="reward-title">Pelota de Fútbol Nike</div>
+          <div class="reward-cost">800 puntos</div>
+          <button class="redeem-btn" onclick="canjearRecompensa('pelota')">
+            Canjear
+          </button>
+        </div>
 
-                <div class="reward-card available">
-                    <div class="reward-icon">💸</div>
-                    <div class="reward-title">50% Descuento Próxima Reserva</div>
-                    <div class="reward-cost">1,000 puntos</div>
-                    <button class="redeem-btn" onclick="canjearRecompensa('descuento')">Canjear</button>
-                </div>
+        <div class="reward-card available">
+          <div class="reward-icon">🎫</div>
+          <div class="reward-title">1 Hora de Cancha GRATIS</div>
+          <div class="reward-cost">1,500 puntos</div>
+          <button class="redeem-btn" onclick="canjearRecompensa('cancha')">
+            Canjear
+          </button>
+        </div>
 
-                <div class="reward-card unavailable">
-                    <div class="reward-icon">👕</div>
-                    <div class="reward-title">Camiseta Los Andes</div>
-                    <div class="reward-cost">3,000 puntos</div>
-                    <button class="redeem-btn" disabled>Puntos Insuficientes</button>
-                </div>
+        <div class="reward-card available">
+          <div class="reward-icon">💸</div>
+          <div class="reward-title">50% Descuento Próxima Reserva</div>
+          <div class="reward-cost">1,000 puntos</div>
+          <button class="redeem-btn" onclick="canjearRecompensa('descuento')">
+            Canjear
+          </button>
+        </div>
 
-                <div class="reward-card unavailable">
-                    <div class="reward-icon">🏆</div>
-                    <div class="reward-title">Torneo VIP (Inscripción)</div>
-                    <div class="reward-cost">5,000 puntos</div>
-                    <button class="redeem-btn" disabled>Puntos Insuficientes</button>
-                </div>
+        <div class="reward-card unavailable">
+          <div class="reward-icon">👕</div>
+          <div class="reward-title">Camiseta Los Andes</div>
+          <div class="reward-cost">3,000 puntos</div>
+          <button class="redeem-btn" disabled>Puntos Insuficientes</button>
+        </div>
 
-                <div class="reward-card available">
-                    <div class="reward-icon">🥤</div>
-                    <div class="reward-title">Bebida + Snack Gratis</div>
-                    <div class="reward-cost">400 puntos</div>
-                    <button class="redeem-btn" onclick="canjearRecompensa('combo')">Canjear</button>
-                </div>
-            </div>
-        </section>
+        <div class="reward-card unavailable">
+          <div class="reward-icon">🏆</div>
+          <div class="reward-title">Torneo VIP (Inscripción)</div>
+          <div class="reward-cost">5,000 puntos</div>
+          <button class="redeem-btn" disabled>Puntos Insuficientes</button>
+        </div>
+
+        <div class="reward-card available">
+          <div class="reward-icon">🥤</div>
+          <div class="reward-title">Bebida + Snack Gratis</div>
+          <div class="reward-cost">400 puntos</div>
+          <button class="redeem-btn" onclick="canjearRecompensa('combo')">
+            Canjear
+          </button>
+        </div>
+      </div>
+    </section>
 
     <!-- SECCIÓN RESERVAS -->
-     <section class="reservations-section">
-            <h2 class="section-title">
-                <span>📋</span>
-                Mis Reservas en Los Andes
-            </h2>
+    <section class="reservations-section">
+      <h2 class="section-title">
+        <span>📋</span>
+        Mis Reservas en Los Andes
+      </h2>
 
-            <div class="tabs">
-                <button class="tab active" onclick="cambiarTab('activas')">🟢 Activas (2)</button>
-                <button class="tab" onclick="cambiarTab('completadas')">✅ Completadas (58)</button>
-                <button class="tab" onclick="cambiarTab('canceladas')">❌ Canceladas (3)</button>
-            </div>
+      <div class="tabs">
+        <button class="tab active" onclick="cambiarTab('activas')">
+          🟢 Activas (2)
+        </button>
+        <button class="tab" onclick="cambiarTab('completadas')">
+          ✅ Completadas (58)
+        </button>
+        <button class="tab" onclick="cambiarTab('canceladas')">
+          ❌ Canceladas (3)
+        </button>
+      </div>
 
-            <!-- Reservas Activas -->
-            <div id="activas" class="tab-content active">
-                <div class="reservation-card">
-                    <div class="reservation-header">
-                        <div class="reservation-title">Cancha 1 - Fútbol 5</div>
-                        <span class="reservation-status status-active">Confirmada</span>
-                    </div>
-                    <div class="reservation-details">
-                        <span>📅 Viernes 21 de Junio, 2025</span>
-                        <span>🕐 20:00 - 21:00</span>
-                        <span>💰 $6,000 (50% OFF Cumpleaños)</span>
-                        <span>⚽ Fútbol 5</span>
-                        <span class="points-earned">+120 puntos al completar</span>
-                    </div>
-                </div>
+      <!-- Reservas Activas -->
+      <div id="activas" class="tab-content active">
+        <div class="reservation-card">
+          <div class="reservation-header">
+            <div class="reservation-title">Cancha 1 - Fútbol 5</div>
+            <span class="reservation-status status-active">Confirmada</span>
+          </div>
+          <div class="reservation-details">
+            <span>📅 Viernes 21 de Junio, 2025</span>
+            <span>🕐 20:00 - 21:00</span>
+            <span>💰 $6,000 (50% OFF Cumpleaños)</span>
+            <span>⚽ Fútbol 5</span>
+            <span class="points-earned">+120 puntos al completar</span>
+          </div>
+        </div>
 
-                <div class="reservation-card">
-                    <div class="reservation-header">
-                        <div class="reservation-title">Cancha 2 - Fútbol 5</div>
-                        <span class="reservation-status status-active">Confirmada</span>
-                    </div>
-                    <div class="reservation-details">
-                        <span>📅 Domingo 23 de Junio, 2025</span>
-                        <span>🕐 18:00 - 19:00</span>
-                        <span>💰 $15,000</span>
-                        <span>⚽ Fútbol 5</span>
-                        <span class="points-earned">+150 puntos al completar</span>
-                    </div>
-                </div>
-            </div>
+        <div class="reservation-card">
+          <div class="reservation-header">
+            <div class="reservation-title">Cancha 2 - Fútbol 5</div>
+            <span class="reservation-status status-active">Confirmada</span>
+          </div>
+          <div class="reservation-details">
+            <span>📅 Domingo 23 de Junio, 2025</span>
+            <span>🕐 18:00 - 19:00</span>
+            <span>💰 $15,000</span>
+            <span>⚽ Fútbol 5</span>
+            <span class="points-earned">+150 puntos al completar</span>
+          </div>
+        </div>
+      </div>
 
-            <!-- Reservas Completadas -->
-            <div id="completadas" class="tab-content">
-                <div class="reservation-card completed">
-                    <div class="reservation-header">
-                        <div class="reservation-title">Cancha 3 - Fútbol 5</div>
-                        <span class="reservation-status status-completed">Completada</span>
-                    </div>
-                    <div class="reservation-details">
-                        <span>📅 Sábado 15 de Junio, 2025</span>
-                        <span>🕐 19:00 - 20:00</span>
-                        <span>💰 $15,000</span>
-                        <span>⚽ Fútbol 5</span>
-                        <span>⭐ Valoración: 5/5</span>
-                        <span class="points-earned">+150 puntos ganados</span>
-                    </div>
-                </div>
+      <!-- Reservas Completadas -->
+      <div id="completadas" class="tab-content">
+        <div class="reservation-card completed">
+          <div class="reservation-header">
+            <div class="reservation-title">Cancha 3 - Fútbol 5</div>
+            <span class="reservation-status status-completed">Completada</span>
+          </div>
+          <div class="reservation-details">
+            <span>📅 Sábado 15 de Junio, 2025</span>
+            <span>🕐 19:00 - 20:00</span>
+            <span>💰 $15,000</span>
+            <span>⚽ Fútbol 5</span>
+            <span>⭐ Valoración: 5/5</span>
+            <span class="points-earned">+150 puntos ganados</span>
+          </div>
+        </div>
 
-                <div class="reservation-card completed">
-                    <div class="reservation-header">
-                        <div class="reservation-title">Cancha 1 - Fútbol 5</div>
-                        <span class="reservation-status status-completed">Completada</span>
-                    </div>
-                    <div class="reservation-details">
-                        <span>📅 Miércoles 12 de Junio, 2025</span>
-                        <span>🕐 21:00 - 22:00</span>
-                        <span>💰 $12,000</span>
-                        <span>⚽ Fútbol 5</span>
-                        <span>⭐ Valoración: 5/5</span>
-                        <span class="points-earned">+120 puntos ganados</span>
-                    </div>
-                </div>
+        <div class="reservation-card completed">
+          <div class="reservation-header">
+            <div class="reservation-title">Cancha 1 - Fútbol 5</div>
+            <span class="reservation-status status-completed">Completada</span>
+          </div>
+          <div class="reservation-details">
+            <span>📅 Miércoles 12 de Junio, 2025</span>
+            <span>🕐 21:00 - 22:00</span>
+            <span>💰 $12,000</span>
+            <span>⚽ Fútbol 5</span>
+            <span>⭐ Valoración: 5/5</span>
+            <span class="points-earned">+120 puntos ganados</span>
+          </div>
+        </div>
 
-                <div style="text-align: center; margin-top: 20px; color: #666;">
-                    <p>Mostrando las últimas 2 reservas completadas</p>
-                    <button style="background: none; border: 1px solid #2E7D32; color: #2E7D32; padding: 8px 16px; border-radius: 20px; cursor: pointer; margin-top: 10px;">
-                        Ver historial completo
-                    </button>
-                </div>
-            </div>
+        <div style="text-align: center; margin-top: 20px; color: #666">
+          <p>Mostrando las últimas 2 reservas completadas</p>
+          <button
+            style="
+              background: none;
+              border: 1px solid #2e7d32;
+              color: #2e7d32;
+              padding: 8px 16px;
+              border-radius: 20px;
+              cursor: pointer;
+              margin-top: 10px;
+            "
+          >
+            Ver historial completo
+          </button>
+        </div>
+      </div>
 
-            <!-- Reservas Canceladas -->
-            <div id="canceladas" class="tab-content">
-                <div class="reservation-card cancelled">
-                    <div class="reservation-header">
-                        <div class="reservation-title">Cancha 2 - Fútbol 5</div>
-                        <span class="reservation-status status-cancelled">Cancelada</span>
-                    </div>
-                    <div class="reservation-details">
-                        <span>📅 Domingo 9 de Junio, 2025</span>
-                        <span>🕐 16:00 - 17:00</span>
-                        <span>💰 $15,000 (Reembolsado)</span>
-                        <span>❌ Motivo: Lluvia intensa</span>
-                    </div>
-                </div>
+      <!-- Reservas Canceladas -->
+      <div id="canceladas" class="tab-content">
+        <div class="reservation-card cancelled">
+          <div class="reservation-header">
+            <div class="reservation-title">Cancha 2 - Fútbol 5</div>
+            <span class="reservation-status status-cancelled">Cancelada</span>
+          </div>
+          <div class="reservation-details">
+            <span>📅 Domingo 9 de Junio, 2025</span>
+            <span>🕐 16:00 - 17:00</span>
+            <span>💰 $15,000 (Reembolsado)</span>
+            <span>❌ Motivo: Lluvia intensa</span>
+          </div>
+        </div>
 
-                <div class="reservation-card cancelled">
-                    <div class="reservation-header">
-                        <div class="reservation-title">Cancha 1 - Fútbol 5</div>
-                        <span class="reservation-status status-cancelled">Cancelada por Usuario</span>
-                    </div>
-                    <div class="reservation-details">
-                        <span>📅 Viernes 31 de Mayo, 2025</span>
-                        <span>🕐 20:00 - 21:00</span>
-                        <span>💰 $12,000 (Reembolsado 50%)</span>
-                        <span>❌ Motivo: Cancelación tardía</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="reservation-card cancelled">
+          <div class="reservation-header">
+            <div class="reservation-title">Cancha 1 - Fútbol 5</div>
+            <span class="reservation-status status-cancelled"
+              >Cancelada por Usuario</span
+            >
+          </div>
+          <div class="reservation-details">
+            <span>📅 Viernes 31 de Mayo, 2025</span>
+            <span>🕐 20:00 - 21:00</span>
+            <span>💰 $12,000 (Reembolsado 50%)</span>
+            <span>❌ Motivo: Cancelación tardía</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
- 
-        <!-- FOOTER -->
+    <!-- MUESTRA USUARIOS CREADOS -->
+     
+     <div id="lista-usuarios" class="mt-4"></div>
 
-        <footer>
-            <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-        </footer>
-    
-        <script src="../script.js"></script>
-    
-    </body>
-    
-    </html>
+    <!-- FOOTER -->
+
+    <footer>
+      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+        <!-- FIN DE FOOTER -->
+
+<!-- SweetAlert2 -->
+
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+       <!-- js -->
+    <script src="../app.js"></script>
+    <script src="../Js/script.js"></script>
+  </body>
+</html>

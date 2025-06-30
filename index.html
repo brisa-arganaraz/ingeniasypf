@@ -12,31 +12,37 @@
 </head>
 
 <body>
-    <!-- SECCION MENU -->
-
+  <!-- HEADER -->
     <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagenes/logo .png" alt="logoimg">
-            </a>
-        </div>
+      <div class="logo">
+        <a href="#">
+          <img src="../imagenes/logo .png" alt="logoimg" />
+        </a>
+      </div>
 
-        <nav class="menu">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active">INICIO</a></li>
-                <li><a href="../pages/reservas.html">RESERVAS</a></li>
-                <li><a href="../pages/servicios.html">SERVICIOS</a></li>
-                <li><a href="../pages/reglamento.html">REGLAMENTO</a></li>
-                <li><a href="../pages/contacto.html">CONTACTO</a></li>
-                <li><a href="../pages/perfil.html">PERFIL</a></li>
-            </ul>
-        </nav>
+      <nav class="menu">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active">INICIO</a></li>
+          <li><a href="./pages/reservas.html">RESERVAS</a></li>
+          <li><a href="./pages/servicios.html">SERVICIOS</a></li>
+          <li><a href="./pages/reglamento.html">REGLAMENTO</a></li>
+          <li><a href="./pages/contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
 
-        <div id="icono-nav" onclick="responsiveMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+      <div id="icono-nav" onclick="responsiveMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
 
+      <!-- Contenedor para el icono User -->
+      <div id="icon-container">
+        <a href="/pages/login.html"
+          ><img id="icono" src="/imagenes/iconoLogin.png" alt="Icono"
+        /></a>
+      </div>
     </header>
+
+<!-- --------------Fin de Header--------------- -->
 <main>
     <!-- SECCION HERO IMAGEN PRINCIPAL -->
 
@@ -89,8 +95,10 @@
     <footer>
         <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
+    <!-- FIN DE FOOTER  -->
+  
+    <!-- Js -->
+    <script src="Js/script.js"></script>
 
 </body>
 
