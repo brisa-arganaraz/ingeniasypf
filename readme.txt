@@ -8,11 +8,11 @@ Mini Entregas
 │   ├── contacto.html
 │   ├── login.html
 │   ├── perfil.html
-│   ├── registro.html          # Formulario de registro de usuario/ entrega 3 
+│   ├── registro.html   # Formulario de registro de usuario/ entrega 3 
 │   ├── reglamento.html
 │   ├── reservas.html
 │   └── servicios.html
-├── app.js                        # Archivo principal de la app / entrega 3
+├── app.js                # Archivo principal de la app / entrega 3
 ├── index.html                   # Página de inicio/ entrega 3
 ├── style.css                    # Estilos generales/ entrega 3 
 └── readme.txt         
