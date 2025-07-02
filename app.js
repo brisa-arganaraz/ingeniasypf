@@ -87,11 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const ruta = window.location.pathname;
 
   /* Redirecciones */
+  const paginasPublicas = [
+    "/",
+    "/index.html",
+    "/pages/login.html",
+    "/pages/registro.html",
+    "/pages/servicios.html",
+    "/pages/reglamento.html",
+    "/pages/contacto.html"
+  ];
+
+  const esPublica = paginasPublicas.includes(ruta);
+
   if (usuario && (ruta.includes("login.html") || ruta.includes("registro.html"))) {
     window.location.href = "/pages/perfil.html";
     return;
   }
-  if (!usuario && !ruta.includes("login.html") && !ruta.includes("registro.html")) {
+
+  if (!usuario && !esPublica) {
     window.location.href = "/pages/login.html";
     return;
   }

@@ -872,7 +872,7 @@ footer {
 /* prueba formulario con pagina aparte */
 .registro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/imagenes/fondo-registr1.png"), url("/imagenes/fondo-registr2.png");
+    url("/imagenes/fondoregistr1.jpg"), url("/imagenes/fondoregistr2.jpg");
   background-size: auto, 39% auto, 40% auto;
   background-position: center center, top left, bottom right, bottom;
   background-repeat: no-repeat, no-repeat, no-repeat;
