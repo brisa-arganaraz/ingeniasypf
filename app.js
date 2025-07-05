@@ -1,4 +1,3 @@
-
 /* Local storage y Array */
 let usuarios = [];
 
@@ -89,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* Redirecciones */
   const paginasPublicas = [
     "/",
+    "/ingeniasypf/",
     "/ingeniasypf/index.html",
     "/ingeniasypf/pages/login.html",
     "/ingeniasypf/pages/registro.html",
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "/ingeniasypf/pages/reglamento.html",
     "/ingeniasypf/pages/contacto.html"
   ];
-  
+
   const esPublica = paginasPublicas.includes(ruta);
 
   if (usuario && (ruta.includes("login.html") || ruta.includes("registro.html"))) {
@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "/ingeniasypf/pages/login.html";
     return;
   }
-
 
   /*   Header */
   const logoLink = document.querySelector(".logo a");
@@ -123,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     linkPerfil.style.marginRight = "10px";
 
     const imgPerfil = document.createElement("img");
-    imgPerfil.src = "imagenes/iconoLogin.png";
+    imgPerfil.src = "/ingeniasypf/imagenes/iconoLogin.png";
     imgPerfil.alt = "Perfil";
     imgPerfil.style.width = "32px";
     imgPerfil.style.height = "32px";
