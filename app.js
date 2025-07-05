@@ -88,13 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Redirecciones */
   const paginasPublicas = [
-    "/",
-    "/index.html",
-    "/pages/login.html",
-    "/pages/registro.html",
-    "/pages/servicios.html",
-    "/pages/reglamento.html",
-    "/pages/contacto.html"
+    "/ingeniasypf/",
+    "/ingeniasypf/index.html",
+    "/ingeniasypf/pages/login.html",
+    "/ingeniasypf/pages/registro.html",
+    "/ingeniasypf/pages/servicios.html",
+    "/ingeniasypf/pages/reglamento.html",
+    "/ingeniasypf/pages/contacto.html"
   ];
 
   const esPublica = paginasPublicas.includes(ruta);
