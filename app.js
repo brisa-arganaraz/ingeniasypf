@@ -40,7 +40,7 @@ function obtenerUsuarioLogueado() {
 
 function cerrarSesion() {
   sessionStorage.removeItem("usuarioLogueado");
-  window.location.href = "/pages/login.html";
+  window.location.href = "/ingeniasypf/pages/login.html";
 }
 
 /* ---------- FUNCIONES DE USUARIOS ---------- */
@@ -100,25 +100,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const esPublica = paginasPublicas.includes(ruta);
 
   if (usuario && (ruta.includes("login.html") || ruta.includes("registro.html"))) {
-    window.location.href = "/pages/perfil.html";
+    window.location.href = "/ingeniasypf/pages/perfil.html";
     return;
   }
 
   if (!usuario && !esPublica) {
-    window.location.href = "/pages/login.html";
+    window.location.href = "/ingeniasypf/pages/login.html";
     return;
   }
 
   /*   Header */
   const logoLink = document.querySelector(".logo a");
-  if (logoLink) logoLink.href = usuario ? "/pages/perfil.html" : "/pages/login.html";
+  if (logoLink) logoLink.href = usuario ? "/ingeniasypf/pages/perfil.html" : "/ingeniasypf/pages/login.html";
 
   const iconContainer = document.getElementById("icon-container");
   if (usuario && iconContainer) {
     iconContainer.innerHTML = "";
 
     const linkPerfil = document.createElement("a");
-    linkPerfil.href = "/pages/perfil.html";
+    linkPerfil.href = "/ingeniasypf/pages/perfil.html";
     linkPerfil.style.marginRight = "10px";
 
     const imgPerfil = document.createElement("img");
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "Ya podés iniciar sesión.",
           confirmButtonColor: "#05a500"
         }).then(() => {
-          window.location.href = "/pages/login.html";
+          window.location.href = "/ingeniasypf/pages/login.html";
         });
       }
     });
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
           timer: 1800,
           timerProgressBar: true,
         }).then(() => {
-          window.location.href = "/pages/perfil.html";
+          window.location.href = "/ingeniasypf/pages/perfil.html";
         });
       } else {
         Swal.fire({
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* PERFIL- VISUALIZACION DE LISTA DE USUARIOS AL FINAL DE PAGINA */
   if (ruta.includes("perfil.html")) {
     if (!usuario) {
-      window.location.href = "/pages/login.html";
+      window.location.href = "/ingeniasypf/pages/login.html";
       return;
     }
 
