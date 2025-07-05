@@ -40,7 +40,7 @@ function obtenerUsuarioLogueado() {
 
 function cerrarSesion() {
   sessionStorage.removeItem("usuarioLogueado");
-  window.location.href = "pages/login.html";
+  window.location.href = "/ingeniasypf/pages/login.html";
 }
 
 /* ---------- FUNCIONES DE USUARIOS ---------- */
@@ -78,7 +78,7 @@ function login(email, contrasena) {
   return usuarios.find((u) => u.email === email && u.contrasena === contrasena);
 }
 
-/*  ---------- FUNCIONALIDADES POR PÁGINA ---------*/
+/*  ---------- FUNCIONALIDADES POR PÁGINA ----------*/
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarUsuarios();
@@ -88,26 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Redirecciones */
   const paginasPublicas = [
-    "index.html",
-    "pages/login.html",
-    "pages/registro.html",
-    "pages/servicios.html",
-    "pages/reglamento.html",
-    "pages/contacto.html"
+    "/",
+    "/ingeniasypf/index.html",
+    "/ingeniasypf/pages/login.html",
+    "/ingeniasypf/pages/registro.html",
+    "/ingeniasypf/pages/servicios.html",
+    "/ingeniasypf/pages/reglamento.html",
+    "/ingeniasypf/pages/contacto.html"
   ];
-
-  const esPublica = paginasPublicas.some(pagina => ruta.endsWith(pagina));
+  
+  const esPublica = paginasPublicas.includes(ruta);
 
   if (usuario && (ruta.includes("login.html") || ruta.includes("registro.html"))) {
-    window.location.href = "pages/perfil.html";
+    window.location.href = "/ingeniasypf/pages/perfil.html";
     return;
   }
 
   if (!usuario && !esPublica) {
-    window.location.href = "pages/login.html";
+    window.location.href = "/ingeniasypf/pages/login.html";
     return;
   }
-});
 
 
   /*   Header */
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "Ya podés iniciar sesión.",
           confirmButtonColor: "#05a500"
         }).then(() => {
-          window.location.href = "pages/login.html";
+          window.location.href = "/ingeniasypf/pages/login.html";
         });
       }
     });
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
           timer: 1800,
           timerProgressBar: true,
         }).then(() => {
-          window.location.href = "pages/perfil.html";
+          window.location.href = "/ingeniasypf/pages/perfil.html";
         });
       } else {
         Swal.fire({
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* PERFIL- VISUALIZACION DE LISTA DE USUARIOS AL FINAL DE PAGINA */
   if (ruta.includes("perfil.html")) {
     if (!usuario) {
-      window.location.href = "pages/login.html";
+      window.location.href = "/ingeniasypf/pages/login.html";
       return;
     }
 
@@ -259,4 +259,4 @@ if (contenedorLista) {
 }
 
   }
-;
+});
