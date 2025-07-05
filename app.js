@@ -78,7 +78,7 @@ function login(email, contrasena) {
   return usuarios.find((u) => u.email === email && u.contrasena === contrasena);
 }
 
-/*  ---------- FUNCIONALIDADES POR PÁGINA ----------*/
+/*  ---------- FUNCIONALIDADES POR PÁGINA ---------*/
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarUsuarios();
@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Redirecciones */
   const paginasPublicas = [
-    "/",
     "index.html",
     "pages/login.html",
     "pages/registro.html",
@@ -97,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "pages/contacto.html"
   ];
 
-  const esPublica = paginasPublicas.includes(ruta);
+  const esPublica = paginasPublicas.some(pagina => ruta.endsWith(pagina));
 
   if (usuario && (ruta.includes("login.html") || ruta.includes("registro.html"))) {
     window.location.href = "pages/perfil.html";
@@ -108,6 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "pages/login.html";
     return;
   }
+});
+
 
   /*   Header */
   const logoLink = document.querySelector(".logo a");
@@ -122,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     linkPerfil.style.marginRight = "10px";
 
     const imgPerfil = document.createElement("img");
-    imgPerfil.src = "/imagenes/iconoLogin.png";
+    imgPerfil.src = "imagenes/iconoLogin.png";
     imgPerfil.alt = "Perfil";
     imgPerfil.style.width = "32px";
     imgPerfil.style.height = "32px";
@@ -258,4 +259,4 @@ if (contenedorLista) {
 }
 
   }
-});
+;
