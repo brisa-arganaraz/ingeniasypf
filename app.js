@@ -1,3 +1,5 @@
+const carpeta = '';
+
 /* Local storage y Array */
 let usuarios = [];
 
@@ -39,7 +41,7 @@ function obtenerUsuarioLogueado() {
 
 function cerrarSesion() {
   sessionStorage.removeItem("usuarioLogueado");
-  window.location.href = "/ingeniasypf/pages/login.html";
+  window.location.href = carpeta + "/pages/login.html";
 }
 
 /* ---------- FUNCIONES DE USUARIOS ---------- */
@@ -87,42 +89,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Redirecciones */
   const paginasPublicas = [
-    "/",
-    "/ingeniasypf/",
-    "/ingeniasypf/index.html",
-    "/ingeniasypf/pages/login.html",
-    "/ingeniasypf/pages/registro.html",
-    "/ingeniasypf/pages/servicios.html",
-    "/ingeniasypf/pages/reglamento.html",
-    "/ingeniasypf/pages/contacto.html"
+    carpeta + "/",
+    carpeta + "/index.html",
+    carpeta + "/pages/login.html",
+    carpeta + "/pages/registro.html",
+    carpeta + "/pages/servicios.html",
+    carpeta + "/pages/reglamento.html",
+    carpeta + "/pages/contacto.html"
   ];
 
   const esPublica = paginasPublicas.includes(ruta);
 
   if (usuario && (ruta.includes("login.html") || ruta.includes("registro.html"))) {
-    window.location.href = "/ingeniasypf/pages/perfil.html";
+    window.location.href = carpeta + "/pages/perfil.html";
     return;
   }
 
   if (!usuario && !esPublica) {
-    window.location.href = "/ingeniasypf/pages/login.html";
+    window.location.href = carpeta +  "/pages/login.html";
     return;
   }
 
   /*   Header */
   const logoLink = document.querySelector(".logo a");
-  if (logoLink) logoLink.href = usuario ? "/ingeniasypf/pages/perfil.html" : "/ingeniasypf/pages/login.html";
+  if (logoLink) logoLink.href = usuario ? carpeta + "/pages/perfil.html" : "/pages/login.html";
 
   const iconContainer = document.getElementById("icon-container");
   if (usuario && iconContainer) {
     iconContainer.innerHTML = "";
 
     const linkPerfil = document.createElement("a");
-    linkPerfil.href = "/ingeniasypf/pages/perfil.html";
+    linkPerfil.href =carpeta + "/pages/perfil.html";
     linkPerfil.style.marginRight = "10px";
 
     const imgPerfil = document.createElement("img");
-    imgPerfil.src = "/ingeniasypf/imagenes/iconoLogin.png";
+    imgPerfil.src = carpeta + "/imagenes/iconoLogin.png";
     imgPerfil.alt = "Perfil";
     imgPerfil.style.width = "32px";
     imgPerfil.style.height = "32px";
@@ -174,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "Ya podés iniciar sesión.",
           confirmButtonColor: "#05a500"
         }).then(() => {
-          window.location.href = "/ingeniasypf/pages/login.html";
+          window.location.href = carpeta + "/pages/login.html";
         });
       }
     });
@@ -197,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
           timer: 1800,
           timerProgressBar: true,
         }).then(() => {
-          window.location.href = "/ingeniasypf/pages/perfil.html";
+          window.location.href = carpeta + "/pages/perfil.html";
         });
       } else {
         Swal.fire({
@@ -213,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* PERFIL- VISUALIZACION DE LISTA DE USUARIOS AL FINAL DE PAGINA */
   if (ruta.includes("perfil.html")) {
     if (!usuario) {
-      window.location.href = "/ingeniasypf/pages/login.html";
+      window.location.href = carpeta + "/pages/login.html";
       return;
     }
 
