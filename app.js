@@ -113,14 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /*   Header */
   const logoLink = document.querySelector(".logo a");
-  if (logoLink) logoLink.href = usuario ? carpeta + "/pages/perfil.html" : "/pages/login.html";
+  if (logoLink) logoLink.href = usuario ? carpeta + "/pages/perfil.html" : carpeta + "/pages/login.html";
 
   const iconContainer = document.getElementById("icon-container");
   if (usuario && iconContainer) {
     iconContainer.innerHTML = "";
 
     const linkPerfil = document.createElement("a");
-    linkPerfil.href =carpeta + "/pages/perfil.html";
+    linkPerfil.href = carpeta + "/pages/perfil.html";
     linkPerfil.style.marginRight = "10px";
 
     const imgPerfil = document.createElement("img");
