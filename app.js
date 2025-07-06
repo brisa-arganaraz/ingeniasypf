@@ -1,4 +1,5 @@
-const carpeta = '';
+/* para que ande desde github y local */
+const carpeta = window.location.hostname.includes('github.io') ? '/ingeniasypf' : '';
 
 /* Local storage y Array */
 let usuarios = [];
