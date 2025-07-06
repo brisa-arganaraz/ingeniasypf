@@ -1,5 +1,5 @@
-/* para que ande desde github y local */
-const carpeta = window.location.hostname.includes('github.io') ? '/ingeniasypf' : '';
+const carpeta = '/ingeniasypf';
+
 
 /* Local storage y Array */
 let usuarios = [];
