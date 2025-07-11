@@ -1,7 +1,6 @@
 const carpeta = '/ingeniasypf';
 
-
-/* Local storage y Array */
+/* Local stoorage y Array */
 let usuarios = [];
 
 function cargarUsuarios() {
