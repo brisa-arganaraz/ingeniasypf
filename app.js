@@ -1,4 +1,9 @@
-const carpeta = '/ingeniasypf';
+let carpeta = '/ingeniasypf';
+// Detectamos si esta en locla o online porque sino la ruta de la raiz cambia
+const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+if (isLocal) {
+  carpeta = ""
+}
 
 /* Local stoorage y Array */
 let usuarios = [];
@@ -106,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (!usuario && !esPublica) {
-    window.location.href = carpeta +  "/pages/login.html";
+    window.location.href = carpeta +  "/pages/login.html";//!!!!!!!!!!!!!ES ESTA LINEA LA DEL ERROR -------------------------------------------
     return;
   }
 
