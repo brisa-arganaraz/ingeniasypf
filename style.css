@@ -1081,24 +1081,56 @@ footer {
   }
 }
 
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .avatar {
+  display: flex;
   width: 120px;
   height: 120px;
   border-radius: 50%;
   background: linear-gradient(135deg, #2e7d32, #4caf50);
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: white;
+  color: black;
   font-weight: bold;
   box-shadow: 0 10px 30px rgba(46, 125, 50, 0.3);
   transition: transform 0.3s ease;
-  position: relative;
+  margin-top: 50px;
+  margin: 50px auto 0;
 }
 
 .avatar:hover {
   transform: scale(1.05);
+}
+
+.avatar-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.avatar-back,
+.avatar-next {
+  width: 0; 
+  height: 0; 
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  
+}
+
+.avatar-back {
+  border-right: 15px solid green;
+}
+
+.avatar-next {
+  border-left: 15px solid green;
 }
 
 .birthday-badge {
