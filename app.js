@@ -1,4 +1,4 @@
-const carpeta = '/ingeniasypf';
+const carpeta = '';
 
 /* Local stoorage y Array */
 let usuarios = [];

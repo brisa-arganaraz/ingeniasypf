@@ -27,7 +27,11 @@ body {
   align-items: center;
   height: 85px;
   padding: 5px 10%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ← aseguramos que quede encima */
 }
 
 .logo {
