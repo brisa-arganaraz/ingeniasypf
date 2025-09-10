@@ -82,3 +82,43 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.animationDelay = `${index * 0.1}s`;
     });
 });
+
+/*formulario de reserva  */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-reserva");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const cancha = document.getElementById("cancha").value;
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+    const horas = parseInt(document.getElementById("horas").value);
+    const precioBase = 3000;
+    const precioTotal = precioBase * horas;
+
+    const nuevaReserva = {
+      id: Date.now(),
+      cliente: nombre,
+      telefono: telefono,
+      cancha: cancha,
+      fecha: fecha,
+      hora: hora,
+      horas: horas,
+      precio: `$${precioTotal}`,
+      estado: "Pendiente",
+      metodoPago: "Efectivo",
+    };
+
+    const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
+    reservas.push(nuevaReserva);
+    localStorage.setItem("reservas", JSON.stringify(reservas));
+
+    document.getElementById("mensaje-reserva").innerText = "¡Reserva registrada con éxito!";
+    form.reset();
+  });
+});

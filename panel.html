@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+    
+<div class="container">
+        
+    <!-- SECTION: Header -->
+        
+    <section class="header-section">
+     <div class="header">
+        <h1>📋 Panel de Administración - Reservas de Canchas</h1>
+        <p>Gestiona todas las reservas de manera eficiente</p>
+     </div>
+    </section>
+
+   <!-- SECTION: Statistics Cards -->
+        
+    <section class="stats-section">
+     <div class="stats-grid">
+        <div class="stat-card total-played">
+            <div class="stat-content">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Total</div>
+            </div>
+          <div class="stat-icon">🏆</div>
+        </div>
+     <div class="stat-card confirmed">
+        <div class="stat-content">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Confirmados</div>
+        </div>
+     <div class="stat-icon">✅</div>
+     </div>
+     <div class="stat-card pending">
+        <div class="stat-content">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Jugadas</div>
+        </div>
+     <div class="stat-icon">✓</div>
+     </div>
+     <div class="stat-card cancelled">
+        <div class="stat-content">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Canceladas</div>
+        </div>
+     <div class="stat-icon">❌</div>
+     </div>
+     <div class="stat-card total-hours">
+        <div class="stat-content">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Pendientes</div>
+        </div>
+     <div class="stat-icon">⏳</div>
+     </div>
+     <div class="stat-card birthdays">
+         <div class="stat-content">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Cumpleaños</div>
+         </div>
+     <div class="stat-icon">🎂</div>
+     </div>
+     <div class="stat-card income">
+        <div class="stat-content">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Total Horas</div>
+        </div>
+     <div class="stat-icon">⏰</div>
+     </div>
+     <div class="stat-card income">
+        <div class="stat-content">
+            <div class="stat-number">$22,500</div>
+            <div class="stat-label">Ingresos</div>
+        </div>
+     <div class="stat-icon">💰</div>
+     </div>
+     </div>
+    </section>
+   
+   <!-- SECTION: Filtros de busqueda -->
+    
+    <section class="filters-section">
+     <div class="filters-header">
+      <span class="filters-icon">🔎</span>
+      <h2>Filtros y Búsqueda</h2>
+     </div>
+
+     <div class="filter-group">
+      <label class="filter-label">
+       <span class="filter-label-icon">📅</span> Fecha
+      </label>
+      <input type="date" class="filter-input">
+     </div>
+
+     <div class="filter-group">
+      <label class="filter-label">
+       <span class="filter-label-icon">📋</span> Estado
+      </label>
+      <select class="filter-input">
+       <option>Todos los estados</option>
+       <option>Confirmados</option>
+       <option>Cancelados</option>
+       <option>Pendientes</option>
+      </select>
+     </div>
+
+     <div class="filter-group">
+      <label class="filter-label">
+       <span class="filter-label-icon">🔍</span> Buscar Cliente
+      </label>
+      <input type="text" class="filter-input" placeholder="Nombre del cliente...">
+     </div>
+    </section>   
+
+  <!-- SECTION: Horarios -->
+
+    <section class="available-hours">
+     <div class="section-title">⏰ Horarios Disponibles</div>
+      <div class="courts-container">
+       <div class="court-schedule">
+        <div class="court-header">Cancha 1</div>
+        <div class="time-slots">
+          <div class="time-slot available">08:00-09:00</div>
+          <div class="time-slot available">09:00-10:00</div>
+          <div class="time-slot occupied">10:00-11:00</div>
+          <div class="time-slot available">11:00-12:00</div>
+          <div class="time-slot occupied">12:00-13:00</div>
+          <div class="time-slot available">13:00-14:00</div>
+          <div class="time-slot available">14:00-15:00</div>
+          <div class="time-slot occupied">15:00-16:00</div>
+          <div class="time-slot available">16:00-17:00</div>
+          <div class="time-slot available">17:00-18:00</div>
+          <div class="time-slot occupied">18:00-19:00</div>
+          <div class="time-slot available">19:00-20:00</div>
+        </div>
+      </div>
+ 
+      <div class="court-schedule">
+       <div class="court-header">Cancha 2</div>
+       <div class="time-slots">
+          <div class="time-slot occupied">08:00-09:00</div>
+          <div class="time-slot available">09:00-10:00</div>
+          <div class="time-slot available">10:00-11:00</div>
+          <div class="time-slot occupied">11:00-12:00</div>
+          <div class="time-slot available">12:00-13:00</div>
+          <div class="time-slot occupied">13:00-14:00</div>
+          <div class="time-slot available">14:00-15:00</div>
+          <div class="time-slot available">15:00-16:00</div>
+          <div class="time-slot occupied">16:00-17:00</div>
+          <div class="time-slot available">17:00-18:00</div>
+          <div class="time-slot available">18:00-19:00</div>
+          <div class="time-slot occupied">19:00-20:00</div>
+       </div>
+       </div>
+
+      <div class="court-schedule">
+       <div class="court-header">Cancha 3</div>
+       <div class="time-slots">
+         <div class="time-slot available">08:00-09:00</div>
+          <div class="time-slot occupied">09:00-10:00</div>
+          <div class="time-slot available">10:00-11:00</div>
+          <div class="time-slot available">11:00-12:00</div>
+          <div class="time-slot occupied">12:00-13:00</div>
+          <div class="time-slot available">13:00-14:00</div>
+          <div class="time-slot occupied">14:00-15:00</div>
+          <div class="time-slot available">15:00-16:00</div>
+          <div class="time-slot available">16:00-17:00</div>
+          <div class="time-slot occupied">17:00-18:00</div>
+          <div class="time-slot available">18:00-19:00</div>
+          <div class="time-slot available">19:00-20:00</div>
+        </div>
+        </div>
+
+      <div class="court-schedule">
+       <div class="court-header">Cancha 4</div>
+       <div class="time-slots">
+          <div class="time-slot available">08:00-09:00</div>
+          <div class="time-slot available">09:00-10:00</div>
+          <div class="time-slot occupied">10:00-11:00</div>
+          <div class="time-slot available">11:00-12:00</div>
+          <div class="time-slot available">12:00-13:00</div>
+          <div class="time-slot occupied">13:00-14:00</div>
+          <div class="time-slot available">14:00-15:00</div>
+          <div class="time-slot occupied">15:00-16:00</div>
+          <div class="time-slot available">16:00-17:00</div>
+          <div class="time-slot available">17:00-18:00</div>
+          <div class="time-slot occupied">18:00-19:00</div>
+          <div class="time-slot available">19:00-20:00</div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- SECTION:Gestion de reservas-->
+
+    <section class="gestion-reservas">
+  <div class="reservas-header">📅 Gestión de Reservas - 2025-08-02</div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Hora</th>
+        <th>Cliente</th>
+        <th>Teléfono</th>
+        <th>Cancha</th>
+        <th>Horas</th>
+        <th>Precio</th>
+        <th>Estado</th>
+        <th>Pago</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>09:00 - 11:00</td>
+        <td>Juan Pérez</td>
+        <td>11-2345-6789</td>
+        <td>Cancha 1</td>
+        <td>2h</td>
+        <td class="precio">$8000</td>
+        <td><span class="estado confirmada">✔ Confirmada</span></td>
+        <td>
+          <button class="btn btn-efectivo">Efectivo</button>
+          <button class="btn btn-transferencia">Transferencia</button>
+        </td>
+        <td>
+          <button class="btn btn-jugada">Jugada</button>
+          <button class="btn btn-cancelar">Cancelar</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>11:00 - 12:00</td>
+        <td>María González</td>
+        <td>11-9876-5432</td>
+        <td>Cancha 2</td>
+        <td>1h</td>
+        <td class="precio">$4500</td>
+        <td><span class="estado confirmada">✔ Confirmada</span></td>
+        <td>
+          <button class="btn btn-efectivo">Efectivo</button>
+          <button class="btn btn-transferencia">Transferencia</button>
+        </td>
+        <td>
+          <button class="btn btn-jugada">Jugada</button>
+          <button class="btn btn-cancelar">Cancelar</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>14:00 - 16:00</td>
+        <td>Carlos Ruiz</td>
+        <td>11-5555-1234</td>
+        <td>Cancha 1</td>
+        <td>2h</td>
+        <td class="precio">$9000</td>
+        <td><span class="estado cancelada">✖ Cancelada</span></td>
+        <td>-</td>
+        <td>
+          <button class="btn btn-cancelar" disabled>Cancelar</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>16:00 - 18:00</td>
+        <td>Ana López</td>
+        <td>11-7777-8888</td>
+        <td>Cancha 3</td>
+        <td>2h</td>
+        <td class="precio">$8500</td>
+        <td><span class="estado pendiente">⚠ Pendiente</span></td>
+        <td>
+          <button class="btn btn-efectivo">Efectivo</button>
+          <button class="btn btn-transferencia">Transferencia</button>
+        </td>
+        <td>
+          <button class="btn btn-confirmar">Confirmar</button>
+          <button class="btn btn-cancelar">Cancelar</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>18:00 - 20:00</td>
+        <td>Roberto Silva</td>
+        <td>11-3333-4444</td>
+        <td>Cancha 2</td>
+        <td>2h</td>
+        <td class="precio">$10.000</td>
+        <td><span class="estado jugada">✔ Jugada</span></td>
+        <td>
+          <button class="btn btn-efectivo">Efectivo</button>
+        </td>
+        <td>
+          <button class="btn btn-jugada" disabled>Jugada</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    </section>
+    
+    <script src="panel.js"></script>
+ 
+</body>
+</html>

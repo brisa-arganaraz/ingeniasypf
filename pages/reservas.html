@@ -47,7 +47,7 @@
       </div>
     </header>
     <!-- --------------Fin de Header--------------- -->
-    <main>
+    <main class="main">
       
       <!-- SECCION ANUNCIO -->
 
@@ -62,6 +62,9 @@
         <form id="form-reserva">
           <label for="nombre">Nombre y apellido:</label>
           <input type="text" id="nombre" required />
+ 
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" required />
 
           <label for="cancha">Cancha:</label>
           <select id="cancha" required>
@@ -77,6 +80,9 @@
 
           <label for="hora">Horario:</label>
           <input type="time" id="hora" required />
+
+          <label for="horas">Cantidad de horas:</label>
+          <input type="number" id="horas" min="1" max="4" required />
 
           <button type="submit">Reservar</button>
         </form>

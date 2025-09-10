@@ -19,6 +19,7 @@ body {
 .main {
   flex: 1;
   padding: 1rem;
+  margin-top: 75px;
 }
 .header {
   background-color: rgb(5, 165, 0);
@@ -1833,3 +1834,4 @@ footer {
     padding: 20px;
   }
 }
+

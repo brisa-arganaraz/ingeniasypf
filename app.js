@@ -177,9 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /*   Header */
   const logoLink = document.querySelector(".logo a");
   if (logoLink)
-    logoLink.href = usuario
-      ? carpeta + "/pages/perfil.html"
-      : carpeta + "/pages/login.html";
+    logoLink.href = carpeta + "/index.html";
 
   const iconContainer = document.getElementById("icon-container");
   if (usuario && iconContainer) {
