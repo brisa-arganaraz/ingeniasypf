@@ -83,7 +83,8 @@
     </section>
    
    <!-- SECTION: Filtros de busqueda -->
-    
+    <section class="panel-sections">
+
     <section class="filters-section">
      <div class="filters-header">
       <span class="filters-icon">🔎</span>
@@ -116,6 +117,49 @@
       <input type="text" class="filter-input" placeholder="Nombre del cliente...">
      </div>
     </section>   
+ 
+<!-- Formulario rápido -->
+
+        <section class="quick-add">
+            <h3>➕ Agregar Reserva Rápida</h3>
+            <form id="quick-add-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono:</label>
+                        <input type="tel" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Cancha:</label>
+                        <select name="cancha" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Cancha 1">Cancha 1</option>
+                            <option value="Cancha 2">Cancha 2</option>
+                            <option value="Cancha 3">Cancha 3</option>
+                            <option value="Cancha 4">Cancha 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha:</label>
+                        <input type="date" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Hora:</label>
+                        <input type="time" name="hora" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Horas:</label>
+                        <input type="number" name="horas" min="1" max="4" value="1" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-add">Agregar Reserva</button>
+            </form>
+        </section>
+
+        </section>
 
   <!-- SECTION: Horarios -->
 
@@ -196,10 +240,12 @@
       </div>
     </section>
 
+
   <!-- SECTION:Gestion de reservas-->
 
+    
     <section class="gestion-reservas">
-  <div class="reservas-header">📅 Gestión de Reservas - 2025-08-02</div>
+  <div class="reservas-header">📅 Gestión de Reservas </div>
   <table>
     <thead>
       <tr>
@@ -307,7 +353,7 @@
     </tbody>
   </table>
     </section>
-    
+
     <script src="panel.js"></script>
  
 </body>
