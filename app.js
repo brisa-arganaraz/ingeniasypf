@@ -49,6 +49,12 @@ function cerrarSesion() {
   window.location.href = carpeta + "/pages/login.html";
 }
 
+// Función específica para ir al login desde inicio
+function irALoginDesdeInicio() {
+  sessionStorage.setItem('redirectAfterLogin', carpeta + '/index.html');
+  window.location.href = carpeta + '/pages/login.html';
+}
+
 /* ---------- FUNCIONES DE USUARIOS ---------- */
 
 function registrarUsuario(nuevoUsuario) {
@@ -87,11 +93,77 @@ function login(email, contrasena) {
   return usuarios.find((u) => u.email === email && u.contrasena === contrasena);
 }
 
+/* ---------- FUNCIONES DE NAVEGACIÓN ---------- */
+
+// Función para actualizar la navegación activa
+function actualizarNavegacionActiva() {
+  const ruta = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  // Remover clase active de todos los enlaces
+  navLinks.forEach(link => link.classList.remove('active'));
+  
+  // Determinar qué página debería estar activa
+  let paginaActiva = '';
+  
+  // Si hay una página guardada en redirectAfterLogin, usar esa
+  const paginaDestino = sessionStorage.getItem('redirectAfterLogin');
+  if (paginaDestino && (ruta.includes('login.html') || ruta.includes('registro.html'))) {
+    // Estamos en login o registro pero venimos de otra página
+    if (paginaDestino.includes('reservas.html')) {
+      paginaActiva = 'RESERVAS';
+    } else if (paginaDestino.includes('servicios.html')) {
+      paginaActiva = 'SERVICIOS';
+    } else if (paginaDestino.includes('reglamento.html')) {
+      paginaActiva = 'REGLAMENTO';
+    } else if (paginaDestino.includes('contacto.html')) {
+      paginaActiva = 'CONTACTO';
+    } else if (paginaDestino.includes('perfil.html')) {
+      paginaActiva = 'PERFIL';
+    } else {
+      paginaActiva = 'INICIO';
+    }
+  } else {
+    // Determinar basado en la ruta actual
+    if (ruta.includes('reservas.html')) {
+      paginaActiva = 'RESERVAS';
+    } else if (ruta.includes('servicios.html')) {
+      paginaActiva = 'SERVICIOS';
+    } else if (ruta.includes('reglamento.html')) {
+      paginaActiva = 'REGLAMENTO';
+    } else if (ruta.includes('contacto.html')) {
+      paginaActiva = 'CONTACTO';
+    } else if (ruta.includes('perfil.html')) {
+      paginaActiva = 'PERFIL';
+    } else {
+      paginaActiva = 'INICIO';
+    }
+  }
+  
+  // Aplicar clase active al enlace correspondiente
+  navLinks.forEach(link => {
+    if (link.textContent.trim() === paginaActiva) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Función para guardar la página de origen antes de redirigir
+function guardarPaginaOrigen() {
+  const rutaActual = window.location.pathname;
+  // Solo guardar si no estamos ya en login o registro
+  if (!rutaActual.includes('login.html') && !rutaActual.includes('registro.html')) {
+    sessionStorage.setItem('redirectAfterLogin', rutaActual);
+  }
+}
 
 /*  ---------- FUNCIONALIDADES POR PÁGINA ----------*/
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarUsuarios();
+
+  // Actualizar navegación activa al cargar la página
+  actualizarNavegacionActiva();
 
   const usuario = obtenerUsuarioLogueado();
   const ruta = window.location.pathname;
@@ -107,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
     carpeta + "/pages/contacto.html",
   ];
 
-
   const esPublica = paginasPublicas.includes(ruta);
 
   if (
@@ -119,11 +190,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (!usuario && !esPublica) {
-    window.location.href = carpeta + "/pages/login.html"; //!!!!!!!!!!!!!ES ESTA LINEA LA DEL ERROR -------------------------------------------
+    // Guardar la página actual antes de redirigir
+    guardarPaginaOrigen();
+    window.location.href = carpeta + "/pages/login.html";
     return;
   }
-
-
 
   /*  ---------- FUNCIONES CAMBIO DE AVATARS ----------*/
 
@@ -172,12 +243,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
-
   /*   Header */
   const logoLink = document.querySelector(".logo a");
   if (logoLink)
     logoLink.href = carpeta + "/index.html";
+
+  // Manejar botones de login desde páginas específicas
+  const botonesLogin = document.querySelectorAll('a[href*="login.html"], button[onclick*="login"], .btn-login, [data-login]');
+  botonesLogin.forEach(boton => {
+    boton.addEventListener('click', (e) => {
+      // Si no estamos ya en login, guardar la página actual
+      if (!ruta.includes('login.html')) {
+        sessionStorage.setItem('redirectAfterLogin', ruta);
+      }
+    });
+  });
+
+  // También manejar específicamente el icono de login del header
+  const iconoLogin = document.querySelector('#icon-container a[href*="login.html"]');
+  if (iconoLogin) {
+    iconoLogin.addEventListener('click', (e) => {
+      // Guardar la página actual como origen
+      sessionStorage.setItem('redirectAfterLogin', ruta);
+    });
+  }
+
+  // Manejar botones específicos en la página de inicio
+  if (ruta.includes('index.html') || ruta === carpeta + '/' || ruta === '/') {
+    // Manejar tanto el botón como el enlace dentro (para la estructura button > a)
+    const botonBienvenido = document.querySelector('.botonBienvenido');
+    const buttonContenedor = document.querySelector('button .botonBienvenido');
+    
+    if (botonBienvenido) {
+      botonBienvenido.addEventListener('click', (e) => {
+        // Forzar que se guarde como página de inicio
+        sessionStorage.setItem('redirectAfterLogin', carpeta + '/index.html');
+      });
+    }
+    
+    if (buttonContenedor) {
+      // También agregar el evento al botón contenedor
+      buttonContenedor.parentElement.addEventListener('click', (e) => {
+        sessionStorage.setItem('redirectAfterLogin', carpeta + '/index.html');
+      });
+    }
+  }
 
   const iconContainer = document.getElementById("icon-container");
   if (usuario && iconContainer) {
@@ -241,6 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "Ya podés iniciar sesión.",
           confirmButtonColor: "#05a500",
         }).then(() => {
+          // NO cambiar redirectAfterLogin aquí - mantener la página original
           window.location.href = carpeta + "/pages/login.html";
         });
       }
@@ -249,6 +360,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ----LOGIN */
   if (ruta.includes("login.html")) {
+    // Manejar enlaces hacia registro para que NO sobrescriban redirectAfterLogin
+    const linkRegistro = document.querySelector('a[href*="registro.html"]');
+    if (linkRegistro) {
+      linkRegistro.addEventListener('click', (e) => {
+        // NO hacer nada - mantener el redirectAfterLogin actual
+      });
+    }
+
     const btnLogin = document.querySelector(".login-container button");
     btnLogin.addEventListener("click", () => {
       const email = document.getElementById("email").value.trim();
@@ -264,7 +383,13 @@ document.addEventListener("DOMContentLoaded", () => {
           timer: 1800,
           timerProgressBar: true,
         }).then(() => {
+          const redirectPage = sessionStorage.getItem("redirectAfterLogin");
+          if (redirectPage) {
+            sessionStorage.removeItem("redirectAfterLogin"); // limpiamos
+            window.location.href = redirectPage;
+    } else {
           window.location.href = carpeta + "/pages/perfil.html";
+          }
         });
       } else {
         Swal.fire({
