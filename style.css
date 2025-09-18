@@ -896,7 +896,7 @@ footer {
 /* prueba formulario con pagina aparte */
 .registro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../imagenes/fondoregistr1.jpg"), url("../imagenes/fondoregistr2.jpg");
+    url("/ingeniasypf/imagenes/fondoregistr1.jpg"), url("/ingeniasypf/imagenes/fondoregistr2.jpg");
   background-size: auto, 39% auto, 40% auto;
   background-position: center center, top left, bottom right, bottom;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -1022,7 +1022,7 @@ footer {
 @media (max-width: 480px) {
   .registro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("../imagenes/cancha-futbol.jpg");
+      url("/ingeniasypf/imagenes/cancha-futbol.jpg");
     background-size: auto, cover;
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
