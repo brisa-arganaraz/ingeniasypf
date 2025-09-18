@@ -56,10 +56,13 @@ body {
   gap: 20px;
   align-items: center;
   background-color: rgb(5, 165, 0);
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .nav-links li {
   display: inline-block;
+  margin: 0 !important;
 }
 
 .nav-links li:hover {
@@ -382,8 +385,8 @@ footer {
   background-color: rgb(5, 165, 0); /* Fondo rojo */
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin: 23px auto;
+  padding: 1rem ;
+  margin: 100px auto 15px ;
   border-radius: 0;
   font-size: 1.2rem;
   border: 7px solid black;
@@ -893,7 +896,7 @@ footer {
 /* prueba formulario con pagina aparte */
 .registro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/imagenes/fondoregistr1.jpg"), url("/imagenes/fondoregistr2.jpg");
+    url("../imagenes/fondoregistr1.jpg"), url("../imagenes/fondoregistr2.jpg");
   background-size: auto, 39% auto, 40% auto;
   background-position: center center, top left, bottom right, bottom;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -901,7 +904,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 2rem 1rem;
+  padding: 100px 2rem 1rem;
   margin-top: 85px;
   box-sizing: border-box;
   background-color: #e6ffe6;
@@ -1032,7 +1035,7 @@ footer {
 /*SECCIÓN HEADER DEL CLUB*/
 .club-header-section {
   margin-bottom: 30px;
-  margin-top: 20px;
+  margin-top: 115px;
 }
 
 .club-banner {
