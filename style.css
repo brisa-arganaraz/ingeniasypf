@@ -163,12 +163,16 @@ body {
 @media (max-width: 768px) {
   .hero {
     height: 70vh;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
     height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -366,6 +370,7 @@ body {
   height: auto;
   outline: none;
   pointer-events: none;
+  margin-top: -15px;
 }
 
 /* CSS DEL FOOTER */
