@@ -102,7 +102,7 @@ Posibles mejoras futuras:
 ---
 
 ## 🎥 Demo del Proyecto
-
+<img src="imagenes/demo-web.gif" width="100%">
 
 ## 👩‍💻 Autoras
 
