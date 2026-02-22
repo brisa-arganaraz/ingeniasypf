@@ -9,10 +9,15 @@ Aplicación web desarrollada como proyecto académico, que incluye sistema de re
 Este proyecto simula el funcionamiento básico de un sistema web con:
 
 - Registro de usuarios
+
 - Inicio de sesión
+
 - Validaciones de formulario
+
 - Panel de perfil
+
 - Navegación entre secciones
+
 - Organización modular de archivos
 
 Los datos se gestionan en memoria utilizando arrays (sin base de datos externa).
@@ -22,9 +27,13 @@ Los datos se gestionan en memoria utilizando arrays (sin base de datos externa).
 ## 🧰 Tecnologías Utilizadas
 
 - HTML5
+
 - CSS3
+
 - JavaScript
+
 - Manipulación del DOM
+
 - Validaciones con JS
 
 ---
@@ -55,17 +64,25 @@ Mini Entregas
 ## 🔐 Funcionalidades Principales
 
 ### 📝 Registro de Usuario
+
 - Formulario con validaciones
+
 - Creación de usuario en array
+
 - Verificación de campos obligatorios
 
 ### 🔑 Inicio de Sesión
+
 - Validación de correo y contraseña
+
 - Comparación contra usuarios almacenados
+
 - Redirección a panel de usuario
 
 ### 👤 Panel de Usuario
+
 - Visualización de datos personales
+
 - Acceso luego de autenticación exitosa
 
 ---
@@ -81,10 +98,15 @@ También es posible registrar un nuevo usuario desde el formulario de registro.
 ## 🧠 Lógica Implementada
 
 - Uso de arrays para almacenamiento temporal
+
 - Validaciones personalizadas
+
 - Eventos de formularios
+
 - Manipulación del DOM
+
 - Modularización de archivos JS
+
 - Navegación entre páginas
 
 ---
@@ -94,17 +116,22 @@ También es posible registrar un nuevo usuario desde el formulario de registro.
 Proyecto académico finalizado.
 
 Posibles mejoras futuras:
+
 - Integración con base de datos (Firebase)
+
 - Sistema de autenticación real
+
 - Persistencia de datos
+
 - Diseño responsive mejorado
 
 ---
 
 ## 🎥 Demo del Proyecto
+
 🔗 [Ver la aplicación en vivo](https://brisa-arganaraz.github.io/ingeniasypf/)
 
-## 👩‍💻 Autoras
+👩‍💻 Autoras
 
 - Estrella Cardozo  
 - Brisa Argañaraz  
