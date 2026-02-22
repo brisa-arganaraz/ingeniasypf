@@ -1,46 +1,108 @@
-Mini Entregas 
+# 🌐 Mini Entregas - Aplicación Web con Registro y Login
 
-├── imagenes/                     
+Aplicación web desarrollada como proyecto académico, que incluye sistema de registro, login y panel de usuario utilizando JavaScript para la gestión de datos en memoria mediante arrays.
+
+---
+
+## 🚀 Descripción del Proyecto
+
+Este proyecto simula el funcionamiento básico de un sistema web con:
+
+- Registro de usuarios
+- Inicio de sesión
+- Validaciones de formulario
+- Panel de perfil
+- Navegación entre secciones
+- Organización modular de archivos
+
+Los datos se gestionan en memoria utilizando arrays (sin base de datos externa).
+
+---
+
+## 🧰 Tecnologías Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Manipulación del DOM
+- Validaciones con JS
+
+---
+
+## 📂 Estructura del Proyecto
+Mini Entregas
+│
+├── imagenes/
 ├── Js/
-│   ├── script.js                
-│   └── validaciones.js         
+│ ├── script.js
+│ └── validaciones.js
 ├── pages/
-│   ├── contacto.html
-│   ├── login.html
-│   ├── perfil.html
-│   ├── registro.html   # Formulario de registro de usuario/ entrega 3 
-│   ├── reglamento.html
-│   ├── reservas.html
-│   └── servicios.html
-├── app.js                # Archivo principal de la app / entrega 3
-├── index.html                   # Página de inicio/ entrega 3
-├── style.css                    # Estilos generales/ entrega 3 
-└── readme.txt         
+│ ├── contacto.html
+│ ├── login.html
+│ ├── perfil.html
+│ ├── registro.html
+│ ├── reglamento.html
+│ ├── reservas.html
+│ └── servicios.html
+├── app.js
+├── index.html
+├── style.css
+└── readme.txt
 
 
-Cómo funciona:
+---
 
-Inicio: Accede desde index.html a las distintas secciones del sitio.
+## 🔐 Funcionalidades Principales
 
-Registro: Desde login.html, podés ir a "Registrar" y llenar el formulario (registro.html) con datos básicos.
+### 📝 Registro de Usuario
+- Formulario con validaciones
+- Creación de usuario en array
+- Verificación de campos obligatorios
 
-Login: Una vez registrado, iniciás sesión con el correo y contraseña creados.
+### 🔑 Inicio de Sesión
+- Validación de correo y contraseña
+- Comparación contra usuarios almacenados
+- Redirección a panel de usuario
 
-Panel de Usuario: Luego del login exitoso, accederás a perfil.html donde se veran los datos de usuario.
+### 👤 Panel de Usuario
+- Visualización de datos personales
+- Acceso luego de autenticación exitosa
 
-Demo disponible de prueba:
+---
 
-Datos (aplicados con array), sin necesaidad de registrarse: 
+## 🧪 Usuario de Prueba
 
-usuario: maria@gmail.com
-contraseña: 123456
+Para probar la aplicación sin registrarse:
 
-(También se puede crear un nuevo usuario con el formulario de registro)
+También es posible registrar un nuevo usuario desde el formulario de registro.
 
-Proyecto realizado por:
+---
 
-Estrella Cardozo
+## 🧠 Lógica Implementada
 
-Brisa Argañaraz
+- Uso de arrays para almacenamiento temporal
+- Validaciones personalizadas
+- Eventos de formularios
+- Manipulación del DOM
+- Modularización de archivos JS
+- Navegación entre páginas
 
-Luna Bujalesky
+---
+
+## 📌 Estado del Proyecto
+
+Proyecto académico finalizado.
+
+Posibles mejoras futuras:
+- Integración con base de datos (Firebase)
+- Sistema de autenticación real
+- Persistencia de datos
+- Diseño responsive mejorado
+
+---
+
+## 👩‍💻 Autoras
+
+- Estrella Cardozo  
+- Brisa Argañaraz  
+- Luna Bujalesky  
