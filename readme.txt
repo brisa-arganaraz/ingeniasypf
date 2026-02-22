@@ -102,7 +102,7 @@ Posibles mejoras futuras:
 ---
 
 ## 🎥 Demo del Proyecto
-<img src="imagenes/Demo 1.gif" width="100%">
+🔗 [Ver la aplicación en vivo](https://brisa-arganaraz.github.io/ingeniasypf/)
 
 ## 👩‍💻 Autoras
 
