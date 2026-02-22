@@ -102,7 +102,7 @@ Posibles mejoras futuras:
 ---
 
 ## 🎥 Demo del Proyecto
-<img src="imagenes/demo-web.gif" width="100%">
+<img src="imagenes/https://github.com/brisa-arganaraz/ingeniasypf/blob/main/imagenes/imagenesdemo-web.gif.mp4" width="100%">
 
 ## 👩‍💻 Autoras
 
